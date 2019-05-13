@@ -1,0 +1,9 @@
+<ul>
+  <% @categories.each do |l| %>
+    <li>
+      <%= l.name %> | <%= link_to "edit", edit_category_path(l.id) %> |
+      <%= link_to "delete", category_path(l.id), method: :delete, data: { confirm: "Are yout sure ?" } %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "Create", new_category_path %>

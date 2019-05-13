@@ -1,0 +1,9 @@
+<ul>
+  <% @posts.each do |l| %>
+    <li>
+      <%= l.content %> | <%= l.status %>  | <%= link_to "accepr", post_accept_path(l.id), method: :patch %> |
+      <%= link_to "reject", post_reject_path(l.id), method: :patch %> |
+      <%= link_to "delete", post_path(l.id), method: :delete, data: { confirm: "Are yout sure ?" } %>
+    </li>
+  <% end %>
+</ul>
