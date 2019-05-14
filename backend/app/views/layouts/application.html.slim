@@ -1,0 +1,62 @@
+doctype html
+html
+  head
+    title LearnMore
+    = csrf_meta_tags
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+  body.menu-position-side.menu-side-left.full-screen.with-content-panel
+    .all-wrapper.with-side-panel.solid-bg-all
+      .layout-w
+        = render "layouts/menu_mobile"
+        = render "layouts/menu_desktop"
+        .content-w
+          .top-bar.color-scheme-transparent
+            .top-menu-controls
+              .element-search.autosuggest-search-activator
+                input placeholder=("Nhập vài trường vào...") type="text" /
+              .top-icon.top-settings.os-dropdown-trigger.os-dropdown-position-left
+                i.os-icon.os-icon-ui-46
+
+              .logged-user-w
+                .logged-user-i
+                  .avatar-w
+                    = image_tag "avatar1.jpg"
+                  .logged-user-menu.color-style-bright
+                    .logged-user-avatar-info
+                      .avatar-w
+                        = image_tag "avatar1.jpg"
+                      .logged-user-info-w
+                        .logged-user-name
+                          | Tran Manh Hong
+                        .logged-user-role
+                          | Administrator
+                    .bg-icon
+                      i.os-icon.os-icon-wallet-loaded
+                    ul
+                      li
+                        a href="#"
+                          i.os-icon.os-icon-signs-11
+                          span Thoát
+          ul.breadcrumb
+            li.breadcrumb-item
+              a href="index.html"  Trang chủ
+            li.breadcrumb-item
+              a href="index.html"  Bài viết
+          .content-i
+            = yield
+            / .content-box
+            /   .row
+            /     .col-sm-12
+            /       .element-wrapper
+            /         .element-actions
+            /         h6.element-header
+            /           | Sales Dashboard
+            /         .element-content
+            /           .row
+            / .content-panel
+            /   .element-wrapper
+            /     h6.element-header
+            /       | Team Members
+            /     .element-box-tp

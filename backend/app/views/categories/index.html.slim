@@ -1,0 +1,46 @@
+.content-box
+  .row
+    .col-sm-12
+      .element-wrapper
+        .element-actions
+        h6.element-header
+          | Chuyên mục
+        .element-content
+          .row
+            .table-responsive
+              table.table.table-bordered.table-lg.table-v2.table-striped
+                thead
+                  tr
+                    th.text-center
+                      | STT
+                    th
+                      | Category Name
+                    th
+                      | Posts
+                    th
+                      | Actions
+                tbody
+                  - @categories.each do |cate|
+                    tr id="field-category-#{cate.id}"
+                      td.text-center
+                        = cate.id
+                      td = cate.name
+                      td.text-right
+                        | N/A
+                      td.row-actions
+                        = link_to edit_category_path(cate), remote: true
+                          i.os-icon.os-icon-ui-49
+                        = link_to category_path(cate), method: :delete, class: "danger", data: { confirm: "Are you sure ?"}
+                          i.os-icon.os-icon-ui-15
+.content-panel
+  .element-wrapper
+    h6.element-header
+      | Quick Links
+    .element-box-tp
+      .btn-with-popup
+        .form-create-category
+          = form_for Category.new do |f|
+            .form-group
+              = f.label "Category name"
+              = f.text_field :name, class: "form-control"
+            = f.submit "Create", class: "btn btn-primary"

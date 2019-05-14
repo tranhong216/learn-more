@@ -1,0 +1,11 @@
+= form_for cate do |f|
+  td.text-center
+    = cate.id
+  td
+    .form-group
+      = f.text_field :name, class: "form-control"
+  td.text-right
+    | N/A
+  td.row-actions
+    = f.submit "Update", class: "btn btn-primary"
+    = link_to "Cancel", categories_path, class: "btn btn-white"

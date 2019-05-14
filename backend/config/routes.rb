@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :categories
   resources :posts
+  root "dashboard#index"
   patch "posts/:id/accept", to: "posts#accept", as: :post_accept
   patch "posts/:id/reject", to: "posts#reject", as: :post_reject
 

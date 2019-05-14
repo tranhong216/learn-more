@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery3
+//= require jquery_ujs
 //= require activestorage
-//= require bootstrap
-//= require i18n
-//= require i18n/translations
+//= require _custom_main

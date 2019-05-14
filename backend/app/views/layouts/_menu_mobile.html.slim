@@ -1,0 +1,40 @@
+.menu-mobile.menu-activated-on-click.color-scheme-dark
+  .mm-logo-buttons-w
+    a.mm-logo href="index.html"
+      = image_tag "logo.png"
+      span Clean Admin
+    .mm-buttons
+      .content-panel-open
+        .os-icon.os-icon-grid-circles
+      .mobile-menu-trigger
+        .os-icon.os-icon-hamburger-menu-1
+  .menu-and-user
+    .logged-user-w
+      .avatar-w
+        = image_tag "avatar1.jpg"
+      .logged-user-info-w
+        .logged-user-name
+          | Maria Gomez
+        .logged-user-role
+          | Administrator
+    ul.main-menu
+      li.has-sub-menu
+        a href="index.html"
+        .icon-w
+          .os-icon.os-icon-layout
+        span Dashboard
+        ul.sub-menu
+          li
+            a href="index.html"  Dashboard 1
+          li
+            a href="apps_crypto.html"
+              | Crypto Dashboard
+              strong.badge.badge-danger Hot
+          li
+            a href="apps_support_dashboard.html"  Dashboard 3
+          li
+            a href="apps_projects.html"  Dashboard 4
+          li
+            a href="apps_bank.html"  Dashboard 5
+          li
+            a href="layouts_menu_top_image.html"  Dashboard 6

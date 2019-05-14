@@ -1,0 +1,4 @@
+var row = '<%= j render "categories/form_edit", cate: @category %>';
+console.log(row)
+debugger
+$("#field-category-<%= @category.id %>").html(row);
